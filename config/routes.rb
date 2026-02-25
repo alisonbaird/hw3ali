@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :places
   root "places#index"
+
+  resources :places do
+    resources :entries
+  end
 end

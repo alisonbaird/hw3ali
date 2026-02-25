@@ -1,0 +1,20 @@
+<%= form_with(model: [@place, @entry]) do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :occurred_on, "Date Visited" %>
+    <%= form.date_field :occurred_on %>
+  </div>
+
+  <div>
+    <%= form.submit "Create Entry" %>
+  </div>
+<% end %>
