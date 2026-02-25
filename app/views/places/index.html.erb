@@ -1,0 +1,9 @@
+<h1>My Travel Journal</h1>
+
+<% @places.each do |place| %>
+  <p>
+    <%= link_to place.name, place_path(place) %>
+  </p>
+<% end %>
+
+<%= link_to "Add New Place", new_place_path %>
